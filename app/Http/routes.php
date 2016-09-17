@@ -87,9 +87,18 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/ingresarCargo',  'Mantenedores\MantenedorDeCargos@ingresar')->name('ingresarCargo');
     Route::post('/ingresarCargo', 'Mantenedores\MantenedorDeCargos@accionIngresar')->name('ingresarCargo');
     
-    /**********************************/    
+    /**********************************/
+
+    /***********************************/
+    /** MANTENEDOR DE NIVELES        **/
+    /*********************************/
+    /* list */
+    Route::get('/listarNivel','Mantenedores\MantenedorDeNiveles@listarTodos');
+    //Route::get('/listarCargo',    'Mantenedores\MantenedorDeCargos@listarTodos')->name('listarCargo');
+    //Route::post('/listarCargo',   'Mantenedores\MantenedorDeCargos@buscarCargo');
 
 
+    /***********************************/
 
     
 });
